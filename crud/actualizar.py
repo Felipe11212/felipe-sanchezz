@@ -1,10 +1,11 @@
-personas=[]
-def actualizar():
-    id_persona = int(input("ID de la persona a actualizar: "))
-    for persona in personas:
-        if persona["id"] == id_persona:
-            persona["nombre"] = input("Nuevo nombre: ")
-            persona["edad"] = input("Nueva edad: ")
-            print("Persona actualizada con éxito.")
+from base_datos import productos
+
+def actualizar_producto():
+    id = input("Ingrese el ID del producto a actualizar: ")
+    for p in productos:
+        if p["id"] == id:
+            p["nombre"] = input("Nuevo nombre: ")
+            p["precio"] = float(input("Nuevo precio: "))
+            print("Producto actualizado.")
             return
-    print("Persona no encontrada.")
+    print("Producto no encontrado.")
