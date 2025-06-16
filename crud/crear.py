@@ -1,7 +1,9 @@
-personas=[]
-def crearPersona():
-    nombre = input("Nombre: ")
-    edad = input("Edad: ")
-    persona = {"id": len(personas)+1, "nombre": nombre, "edad": edad}
-    personas.append(persona)
-    print("Persona agregada con éxito.")
+from base_datos import productos
+
+def crear_producto():
+    id = input("Ingrese ID: ")
+    nombre = input("Ingrese nombre: ")
+    precio = float(input("Ingrese precio: "))
+    producto = {"id": id, "nombre": nombre, "precio": precio}
+    productos.append(producto)
+    print("Producto creado exitosamente.")
