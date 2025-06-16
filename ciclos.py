@@ -1,18 +1,16 @@
 # WHILE
-x=1
+numero = 7
+repeticiones = 5
+contador = 0
 
-while x < 8:
-    x+=7
-    print(x)
-    
-else:
-    print('fin')
-    
+while contador < repeticiones:
+    print(numero)
+    contador += 1
+
 
 # FOR
-    
-    for x in 10:
-        print(x+'es el resdultado')    
-        
-    else:
-        ('fin')
+numero = 7
+repeticiones = 5
+
+for i in range(repeticiones):
+    print(numero)
