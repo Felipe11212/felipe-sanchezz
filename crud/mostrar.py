@@ -1,6 +1,8 @@
+from base_datos import productos
 
-personas=[]
-def Mostrar():
-    print("\npersonas:")
-    for persona in personas:
-        print(f"ID: {persona['id']}, Nombre: {persona['nombre']}, Edad: {persona['edad']}")
+def mostrar_productos():
+    if not productos:
+        print("No hay productos registrados.")
+    else:
+        for p in productos:
+            print(f"ID: {p['id']}, Nombre: {p['nombre']}, Precio: {p['precio']}")
