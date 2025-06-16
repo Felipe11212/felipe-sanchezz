@@ -1,12 +1,10 @@
+from base_datos import productos
 
-
-personas=[]
-
-def eliminar():
-    id_persona = int(input("ID de la persona a eliminar: "))
-    for i, persona in enumerate(personas):
-        if persona["id"] == id_persona:
-            del personas[i]
-            print("Persona eliminada con éxito.")
+def eliminar_producto():
+    id = input("Ingrese el ID del producto a eliminar: ")
+    for p in productos:
+        if p["id"] == id:
+            productos.remove(p)
+            print("Producto eliminado.")
             return
-    print("Persona no encontrada.")
+    print("Producto no encontrado.")
